@@ -1,0 +1,4 @@
+rofi.lines: 15
+rofi.font: Source Sans Pro 8
+rofi.show-icons: true
+#rofi.theme: .config/rofi/themes/flat-orange.rasi

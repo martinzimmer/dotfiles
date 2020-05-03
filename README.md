@@ -9,7 +9,8 @@ in/bash
 
 
 ---
-see https://www.atlassian.com/git/tutorials/dotfiles
-Dotfiles inspired by
-Luke Smith
-Kay Hendry
+see https://www.atlassian.com/git/tutorials/dotfiles  
+Dotfiles inspired by  
+Luke Smith  
+Kay Hendry  
+ 

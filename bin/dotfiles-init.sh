@@ -1,6 +1,7 @@
 # Initialisierung eines Bare Git Rep für Dotfiles
 # 
 # curl -Lks http://bit.do/cfg-init | /bin/bash
+# curl -Lks http://https://github.com/martinzimmer/dotfiles/blob/master/bin/dotfiles-init.sh | /bin/bash
 
 
 

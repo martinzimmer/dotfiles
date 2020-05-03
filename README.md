@@ -3,8 +3,7 @@ My Dotfiles
 
 ## Install Dotfiles
 
-curl -Lks http://https://github.com/martinzimmer/dotfiles/blob/master/bin/dotfiles-init.sh | /b
-in/bash
+curl -Lks http://https://github.com/martinzimmer/dotfiles/blob/master/bin/dotfiles-init.sh | /bin/bash
 
 
 

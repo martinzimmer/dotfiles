@@ -1,4 +1,4 @@
-"set the runtime path to include Vundle and initialize
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -12,11 +12,28 @@ call vundle#begin()
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'jreybert/vimagit'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'Yggdroot/indentLine'
+
+" Python Autocompletition
+Plugin 'davidhalter/jedi-vim' 
+
+" automment gc or uncomennt gcc
+"Plugin 'preservim/nerdcommenter'
+Plugin 'tpope/vim-commentary'
+
+" Linting
+Plugin 'dense-analysis/ale'
+
+" Colorschemes
+Plugin 'morhetz/gruvbox'
+Plugin 'crusoexia/vim-dream'
+
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,6 +62,8 @@ set tabstop=4       " number of visual spaces per TAB
 set shiftwidth=4
 set expandtab
 set softtabstop=4   " number of spaces in tab when editing
+set colorcolumn=80  " nach 80 Zeichen Balken
+highlight ColorColumn ctermbg=7
 syntax on
 set number relativenumber
 " Automatic number toggle
@@ -54,6 +73,9 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 filetype plugin on
+
+" Sagt VIM 256 Farben zur Verfügung
+set term=xterm-256color
 
 
 silent! nmap <C-n> :NERDTreeToggle<CR>
@@ -128,8 +150,9 @@ let g:indentLine_color_dark = 1 " (default: 2)
 "let g:indentLine_bgcolor_term = 202
 "let g:indentLine_bgcolor_gui = '#FF5F00'
 
-
-colorscheme zenburn
+" Colorschemes
+"colorscheme zenburn
+colorscheme dream
 
 " Rebind mapleader
 let mapleader = ","
@@ -163,4 +186,16 @@ if executable('ag')
 
  let g:indentLine_char = '⦙'
  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+
+" Speed optimization
+set ttyfast
+set lazyredraw
+
+ """"""""""""""""""""""""""
+ " Custom bindings
+ """""""""""""""""""""""""""
+ 
+ " Comment block
+ vnoremap <silent> <C-k> :Commentary<cr>
 

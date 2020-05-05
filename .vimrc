@@ -5,7 +5,7 @@ call vundle#begin()
 " "call vundle#begin('~/some/path/here')
 "
 " " let Vundle manage Vundle, required
- Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 
 "Plugins
@@ -22,7 +22,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'davidhalter/jedi-vim' 
 
 " automment gc or uncomennt gcc
-"Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-commentary'
 
 " Linting
@@ -126,6 +125,31 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
 
+
+" Ale
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 "Don't Lint on open File
+let g:ale_lint_on_save = 1  " Lint when save
+ " Going to nect error
+nmap <silent> <C-e> <Plug>(ale_next_wrap)
+" Showing Number of Error and warnings
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+    return l:counts.total == 0 ? 'OK' : printf(
+        \   '%d⨉ %d⚠ ',
+        \   all_non_errors,
+        \   all_errors
+        \)
+endfunction
+set statusline+=%=
+set statusline+=\ %{LinterStatus()}
+
+
+
+
 " Fugitive Einstellungen
 
 
@@ -198,4 +222,34 @@ set lazyredraw
  
  " Comment block
  vnoremap <silent> <C-k> :Commentary<cr>
+ nnoremap <silent> <C-k> :Commentary<cr>
 
+" Quickly source .vimrc
+nnoremap <leader>r :source $MYVIMRC<CR>
+" Quickly open .vimrc in new tab
+nnoremap <leader>v :tabedit ~/.vimrc<CR>
+" Quickly quit editting without save
+nnoremap <leader>q :q!<CR>
+" Saves the file (handling the permission-denied error)
+cnoremap w!! w !sudo tee % >/dev/null
+
+" Easily create a new tab.
+noremap <Leader>tN :tabnew<CR>
+" Easily close a tab.
+noremap <Leader>tc :tabclose<CR>
+" Easily move a tab.
+noremap <Leader>tm :tabmove<CR>
+" Easily go to next tab.
+noremap <Leader>tn :tabnext<CR>
+" Easily go to previous tab.
+noremap <Leader>tp :tabprevious<CR>
+" Switch between tabs
+nnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt

@@ -253,3 +253,4 @@ nnoremap <Leader>6 6gt
 nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
+" See https://medium.com/@hql287/10-vim-tips-to-ease-the-learning-curve-c8234cbdafa5

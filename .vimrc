@@ -16,6 +16,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'jreybert/vimagit'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 Plugin 'Yggdroot/indentLine'
 
 " Python Autocompletition
@@ -76,6 +77,9 @@ filetype plugin on
 " Sagt VIM 256 Farben zur Verfügung
 set term=xterm-256color
 
+" Slow switching modes
+" set ttimeoutlen=50
+set timeoutlen=1000 ttimeoutlen=0
 
 silent! nmap <C-n> :NERDTreeToggle<CR>
 silent! map <F3> :NERDTreeFind<CR>

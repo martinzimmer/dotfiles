@@ -9,12 +9,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 "Plugins
-Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'scrooloose/nerdtree'
-"Plugin 'tpope/vim-fugitive'
-Plugin 'jreybert/vimagit'
+Plugin 'tpope/vim-fugitive'
+Plugin 'borissov/fugitive-gitea'
+" Plugin 'jreybert/vimagit'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'Yggdroot/indentLine'
@@ -80,12 +81,11 @@ set term=xterm-256color
 " Slow switching modes
 " set ttimeoutlen=50
 set timeoutlen=1000 ttimeoutlen=0
-
-silent! nmap <C-n> :NERDTreeToggle<CR>
-silent! map <F3> :NERDTreeFind<CR>
-
-let g:NERDTreeMapActivateNode="<F3>"
-let g:NERDTreeMapPreview="<F4>"
+" Nerdtree
+" silent! nmap <C-n> :NERDTreeToggle<CR>
+" silent! map <F3> :NERDTreeFind<CR>
+" let g:NERDTreeMapActivateNode="<F3>"
+" let g:NERDTreeMapPreview="<F4>"
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1 
@@ -94,9 +94,6 @@ let g:airline_powerline_fonts = 1
 set laststatus=2
 
 
-" Instant-Markdown autostart beim öffnen deaktivieren
-let g:instant_markdown_autostart = 0
-"Instant Markdown mit :InstantMarkdownPreview öffnen 
 
 " Unbind the cursor keys in insert, normal and visual modes.
  "for prefix in ['i', 'n', 'v']
@@ -118,16 +115,16 @@ let g:instant_markdown_autostart = 0
 set splitbelow
 set splitright
 
-let g:tmux_navigator_no_mappings = 1
 
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+" Tmux Navigator
+" let g:tmux_navigator_no_mappings = 1
+" nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+" nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+" nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+" nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 "nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
-
-" Disable tmux navigator when zooming the Vim pane
-let g:tmux_navigator_disable_when_zoomed = 1
+"" Disable tmux navigator when zooming the Vim pane
+" let g:tmux_navigator_disable_when_zoomed = 1
 
 
 " Ale
@@ -154,13 +151,14 @@ set statusline+=\ %{LinterStatus()}
 
 
 
-" Fugitive Einstellungen
+" vim Fugitive Einstellungen
 
 
 "fugitive command :Gbrowse will now work with gitlab URL
-"let g:fugitive_gitlab_domains = ['https://my.gitlab.com']
-let g:fugitive_gitlab_domains = ['https://10.10.10.101']
 
+"let g:fugitive_gitlab_domains = ['https://my.gitlab.com']
+" let g:fugitive_gitlab_domains = ['https://10.10.10.101']
+let g:fugitive_gitea_domains = ['httpis://git.aeschma.de']
 " IndentLine Plugin
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 

@@ -88,12 +88,13 @@ set timeoutlen=1000 ttimeoutlen=0
 " let g:NERDTreeMapActivateNode="<F3>"
 " let g:NERDTreeMapPreview="<F4>"
 
-" Airline
+" Airliine
 let g:airline#extensions#tabline#enabled = 1
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 set laststatus=2
-
+set AirlineTheme solarized
+g:airline_solarized_bg='dark'
 
 
 " Unbind the cursor keys in insert, normal and visual modes.

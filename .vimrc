@@ -209,7 +209,7 @@ set noswapfile
  nmap <leader>l :BLines<cr>
 " " Search content in the current file and in files under the current
 " directory
- nmap <leader>g :Ag<cr>
+ nmap <leader>g :Rg<cr>
 
 
  let g:indentLine_char = '⦙'

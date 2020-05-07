@@ -20,14 +20,14 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'Yggdroot/indentLine'
 
-" Python Autocompletition
-Plugin 'davidhalter/jedi-vim' 
 
 " automment gc or uncomennt gcc
 Plugin 'tpope/vim-commentary'
 
 " Linting
 Plugin 'dense-analysis/ale'
+" Python Autocompletition
+Plugin 'davidhalter/jedi-vim'
 
 " Colorschemes
 Plugin 'morhetz/gruvbox'
@@ -53,7 +53,7 @@ filetype plugin indent on    " required
 " " Put your non-Plugin stuff after this line
 
 set nocompatible   " VIM-Zusätze aktivieren
-"set noautoindent 
+"set noautoindent
 setl noai nocin nosi inde=
 set encoding=utf8  " UTF8 als Zeichensatz
 set incsearch      " Zeigt Suchergebnisse während dem Suchen an
@@ -81,6 +81,7 @@ set term=xterm-256color
 " Slow switching modes
 " set ttimeoutlen=50
 set timeoutlen=1000 ttimeoutlen=0
+" set noesckeys
 " Nerdtree
 " silent! nmap <C-n> :NERDTreeToggle<CR>
 " silent! map <F3> :NERDTreeFind<CR>
@@ -88,7 +89,7 @@ set timeoutlen=1000 ttimeoutlen=0
 " let g:NERDTreeMapPreview="<F4>"
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1 
+let g:airline#extensions#tabline#enabled = 1
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 set laststatus=2
@@ -158,7 +159,7 @@ set statusline+=\ %{LinterStatus()}
 
 "let g:fugitive_gitlab_domains = ['https://my.gitlab.com']
 " let g:fugitive_gitlab_domains = ['https://10.10.10.101']
-let g:fugitive_gitea_domains = ['httpis://git.aeschma.de']
+let g:fugitive_gitea_domains = ['https://git.aeschma.de']
 " IndentLine Plugin
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
@@ -188,15 +189,15 @@ set nobackup
 set nowritebackup
 set noswapfile
 "CtrlP
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-if executable('ag')
-		  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  endif
+" let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+" if executable('ag')
+" 		  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"   endif
 
 
-" fzf 
+" fzf
 " Search and switch buffers
  nmap <leader>b :Buffers<cr>
 " " Find files by name under the current directory
@@ -221,7 +222,6 @@ set lazyredraw
  """"""""""""""""""""""""""
  " Custom bindings
  """""""""""""""""""""""""""
- 
  " Comment block
  vnoremap <silent> <C-k> :Commentary<cr>
  nnoremap <silent> <C-k> :Commentary<cr>

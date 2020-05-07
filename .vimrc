@@ -93,8 +93,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 set laststatus=2
-set AirlineTheme solarized
-g:airline_solarized_bg='dark'
+let g:airline_theme = 'solarized'
+let g:airline_solarized_bg = 'dark'
 
 
 " Unbind the cursor keys in insert, normal and visual modes.

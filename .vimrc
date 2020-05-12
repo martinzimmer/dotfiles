@@ -33,7 +33,9 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'crusoexia/vim-dream'
 
-
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themesPlugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes''
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,8 +95,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 set laststatus=2
-set AirlineTheme solarized
-g:airline_solarized_bg='dark'
+" let AirlineTheme simple
+let g:airline_theme='simple'
+" g:airline_solarized_bg='dark'
 
 
 " Unbind the cursor keys in insert, normal and visual modes.

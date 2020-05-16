@@ -8,6 +8,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
+" Hard Mode
+
+" #Plugin 'wikitopian/hardmode'
+" #autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" Toggle Hard mode mir leader h
+" nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
+
 "Plugins
 " Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-airline/vim-airline'
@@ -93,8 +101,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 set laststatus=2
-let g:airline_theme = 'solarized'
-let g:airline_solarized_bg = 'dark'
+let g:airline_theme = 'simple'
+" let g:airline_solarized_bg = 'dark'
 
 
 " Unbind the cursor keys in insert, normal and visual modes.
@@ -111,7 +119,8 @@ let g:airline_solarized_bg = 'dark'
 "nnoremap <C-L> <C-W><C-L>
 "nnoremap <C-H> <C-W><C-H>
 
-
+" X Clipboard
+:set clipboard=unnamedplus
 
 " natural split opening
 set splitbelow
@@ -183,7 +192,7 @@ let g:indentLine_color_dark = 1 " (default: 2)
 colorscheme dream
 
 " Rebind mapleader
-let mapleader = ","
+let mapleader = " "
 
 " keine backup/swap
 set nobackup
@@ -223,6 +232,11 @@ set lazyredraw
  """"""""""""""""""""""""""
  " Custom bindings
  """""""""""""""""""""""""""
+ 
+" jk als ESC um vom INert mode in normal mode
+inoremap jk <ESC>
+inoremap kj <ESC>
+
  " Comment block
  vnoremap <silent> <C-k> :Commentary<cr>
  nnoremap <silent> <C-k> :Commentary<cr>
@@ -234,7 +248,7 @@ nnoremap <leader>v :tabedit ~/.vimrc<CR>
 " Quickly quit editting without save
 nnoremap <leader>q :q!<CR>
 " Saves the file (handling the permission-denied error)
-cnoremap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null 
 
 " Easily create a new tab.
 noremap <Leader>tN :tabnew<CR>

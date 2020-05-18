@@ -41,7 +41,9 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'crusoexia/vim-dream'
 
-
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themesPlugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes''
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -143,6 +143,9 @@ alias trizene="trizen --noedit $@"
 
 alias dotfiles='/usr/bin/git --git-dir=/home/mz/.git-dotfiles/ --work-tree=/home/mz'
 
+alias dot='/usr/bin/git --git-dir=/home/mz/.git-dotfiles/ --work-tree=/home/mz'
+
+
 # Docker aliases
 alias dcd="docker-compose down"
 alias dcupd="docker-compose up -d"

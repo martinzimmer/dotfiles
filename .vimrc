@@ -33,9 +33,9 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-commentary'
 
 " Linting
-Plugin 'dense-analysis/ale'
+" Plugin 'dense-analysis/ale'
 " Python Autocompletition
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 " Colorschemes
 Plugin 'morhetz/gruvbox'

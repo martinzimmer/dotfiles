@@ -35,15 +35,15 @@ from typing import List  # noqa: F401
 ##### DEFINING SOME VARIABLES #####
 mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"                             # My terminal of choice
-myConfig = "/home/mz/.config/qtile/config.py"    # The Qtile config file location
+myConfig = "$HOME/.config/qtile/config.py"    # The Qtile config file location
 
 ##### KEYBINDINGS #####
 keys = [
          ### The essentials
          Key(
              [mod], "Return",
-             lazy.spawn(myTerm+" -e fish"),
-             desc='Launches My Terminal With Fish Shell'
+             lazy.spawn(myTerm),
+             desc='Launches Terminal'
              ),
          Key(
              [mod, "shift"], "Return",
@@ -289,7 +289,7 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 ##### DEFAULT THEME SETTINGS FOR LAYOUTS #####
 layout_theme = {"border_width": 2,
-                "margin": 6,
+                "margin": 1,
                 "border_focus": "e1acff",
                 "border_normal": "1D2330"
                 }

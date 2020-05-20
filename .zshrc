@@ -148,3 +148,7 @@ alias dcd="docker-compose down"
 alias dcupd="docker-compose up -d"
 alias dps="docker ps"
 alias dlogs="docker logs"
+
+
+
+neofetch

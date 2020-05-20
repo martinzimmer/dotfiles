@@ -2,3 +2,6 @@ rofi.lines: 15
 rofi.font: Source Sans Pro 8
 rofi.show-icons: true
 #rofi.theme: .config/rofi/themes/flat-orange.rasi
+# rofi.modi: combi
+# rofi.combi-modi: run,ssh
+rofi.ssh-command: alacritty -e ssh {host}

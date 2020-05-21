@@ -400,18 +400,18 @@ def init_widgets_list():
                         padding=0,
                         fontsize=37
                         ),
-               widget.TextBox(
-                        text=" ₿",
-                        padding = 0,
-                        foreground=colors[2],
-                        background=colors[4],
-                        fontsize=12
-                        ),
-               widget.BitcoinTicker(
-                        foreground=colors[2],
-                        background=colors[4],
-                        padding = 5
-                        ),
+               # widget.TextBox(
+                        # text=" ₿",
+                        # padding = 0,
+                        # foreground=colors[2],
+                        # background=colors[4],
+                        # fontsize=12
+                        # ),
+               # widget.BitcoinTicker(
+                        # foreground=colors[2],
+                        # background=colors[4],
+                        # padding = 5
+                        # ),
                widget.TextBox(
                         text='',
                         background = colors[4],

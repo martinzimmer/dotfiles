@@ -51,6 +51,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+set cursorline
+
 " X Clipboard
 :set clipboard=unnamedplus
 
@@ -77,6 +79,11 @@ set splitright
 "nnoremap <C-L> <C-W><C-L>
 "nnoremap <C-H> <C-W><C-H>
 
+" @todo Conflicts
+" nnoremap <leader>h <C-W>h
+" nnoremap <leader>j <C-W>j
+" nnoremap <leader>k <C-W>k
+" nnoremap <leader>l <C-W>l
 
 " vim Fugitive Einstellungen
 

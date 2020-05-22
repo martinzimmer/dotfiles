@@ -152,7 +152,26 @@ alias dcupd="docker-compose up -d"
 alias dps="docker ps"
 alias dlogs="docker logs"
 
+_exists() { (( $+commands[$1] )) }
 
+_exists vim      && export EDITOR=vim
+_exists nvim     && export EDITOR=nvim
+_exists less     && export PAGER=less
+_exists bsdtar   && alias tar='bsdtar'
+_exists htop     && alias top='htop'
+
+if _exists vim; then
+    alias vim="vim -p"
+    alias vi="vim"
+fi
+
+if _exists nvim; then
+    alias vim="nvim -p"
+    alias vi="nvim"
+fi
+
+
+unfunction _exists
 
 neofetch
 

@@ -155,3 +155,5 @@ alias dlogs="docker logs"
 
 
 neofetch
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

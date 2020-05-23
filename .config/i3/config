@@ -254,6 +254,7 @@ exec nitrogen --restore
 #  Class herausfinden xprop ausführen und Programm anklicken
 for_window [class="^Chromium$" title=" - Chromium$"] border pixel 1 # border none deaktiviert den Rahmen vollständig, pixel 1 deaktiviert den Titel
 for_window [class="^Thunderbird$" title="Thunderbird$"] border pixel 1
+for_window [class="^qutebrowser$" title="qutebrowser$"] border pixel 1
 for_window [class="^Firefox$" title="Firefox$"] border pixel 1
 for_window [class="^Atom$" title="Atom$"] border pixel 1 
 

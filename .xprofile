@@ -3,4 +3,4 @@ xset s off
 xset -dpms
 xset s noblank
 # Faster key repeat and delay
-xset r rate 190 35
+xset r rate 200 25

@@ -215,7 +215,7 @@ bindsym $mod+d exec "rofi -combi-modi window,run,ssh -theme arthur -font 'hack 1
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Use compton
-exec --no-startup-id compton --config ~/.config/compton.conf -b
+exec --no-startup-id picom
 
 #exec --no-startup-id volumeicon
 exec --no-startup-id parcellite

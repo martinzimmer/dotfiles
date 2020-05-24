@@ -176,3 +176,5 @@ unfunction _exists
 neofetch
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+

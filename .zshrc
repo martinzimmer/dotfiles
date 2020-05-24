@@ -127,6 +127,7 @@ alias dcd='docker-compose down'
 alias dcdupd='docker-compose down; docker-compose up -d'
 #alias dcd='docker-compose down'
 
+alias tmux='tmux -2'
 
 ## tmux
 #if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then

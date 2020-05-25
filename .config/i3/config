@@ -19,11 +19,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 10
+# font pango:monospace 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -41,6 +41,9 @@ bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+bindsym $mod+c kill
+bindsym $mod+Shift+c --release exec --no-startup-id xkill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -64,8 +67,9 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move left
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left
+# bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -74,27 +78,27 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+semicolon split h
+bindsym $mod+z split h;exec notify-send 'tile horizontally'
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split v;exec notify-send 'tile vertically'
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -124,9 +128,10 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+# bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -154,6 +159,9 @@ bindsym $mod+r mode "resize"
 
 
 
+# cycle workspaces/Windows
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
 
 # Colors
 # colorclass        border      background  text        indicator   child_border
@@ -163,12 +171,6 @@ client.unfocused    "#000000"   "#222222"   "#888888"   "#000000"   "#ffffff"
 client.urgent       "#000000"   "#900000"   "#ffffff"   "#900000"   "#000000"
 client.placeholder  "#000000"   "#0c0c0c"   "#ffffff"   "#000000"   "#000000"
 client.background   "#000000"
-
-
-
-
-
-
 
 
 
@@ -186,73 +188,58 @@ colors {
      inactive_workspace #000000 #000000 #ffffff
      urgent_workspace #F86A59 #D64937 #ffffff
      }
-
-
-
 }
 
 
 # Deutsche Tastatur
 exec --no-startup-id setxkbmap de
 
-## Eigene Menus
-#bindsym $mod+d exec rofi -show run
-bindsym $mod+d exec "rofi -combi-modi window,run,ssh -theme arthur -font 'hack 10' -show combi"
-#bindsym $mod+d exec rofi -combi-modi window,drun,ssh -show run
-#bindsym $mod+o exec xfce4-appfinder
-#
+## Launcher
+bindsym $mod+space exec "rofi -combi-modi window,run,ssh -theme arthur -font 'hack 10' -show combi"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-
-## Rofi SSH
-#bindsym $mod+. exec rofi -show ssh
-
-## Rofi Window
-#bindsym $mod+- exec rofi -show window
+# Tools
+bindsym $mod+w exec chromium
+bindsym $mod+m exec alacritty -e neomutt
+bindsym $mod+n exec alacritty -e nvim
+bindsym $mod+o  exec alacritty -e ranger
+# bindsym $mod+a exec alacritty -e fzf 
 
 
 
-# Polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Use compton
+# Autostart 
 exec --no-startup-id picom
-
-#exec --no-startup-id volumeicon
 exec --no-startup-id parcellite
 exec --no-startup-id pa-applet 
-#exec --no-startup-id dropbox
 exec --no-startup-id blueberry-tray
-#exec --no-startup-id kalu
-#exec --no-startup-id mpd 
 exec --no-startup-id nm-applet
 exec --no-startup-id remmina -i
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
-exec --no-startup-id nitrogen --restore
 
 focus_follows_mouse no
 
 #exec --no-startup-id xfce4-panel --disable-wm-check
 
 # Make the currently focused window a scratchpad
-bindsym $mod+m move scratchpad
+# bindsym $mod+m move scratchpad
 
 # Show the first scratchpad window
-bindsym $mod+n scratchpad show
+# bindsym $mod+n scratchpad show
 
 # CapsLock als ESC
-exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
-exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+# exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
+# exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
 # Background
 # exec --no-startup-id feh --bg-fill ~/.config/i3/Wallpapers/arch.png
-exec nitrogen --restore
+exec --no-startup-id nitrogen --restore
 
 
-# Disable Boeder für Chromium
+# Disable Boeder 
 #  Class herausfinden xprop ausführen und Programm anklicken
-for_window [class="^Chromium$" title=" - Chromium$"] border pixel 1 # border none deaktiviert den Rahmen vollständig, pixel 1 deaktiviert den Titel
+# border none deaktiviert den Rahmen vollständig, pixel 1 deaktiviert den Titel
+for_window [class="^Chromium$" title=" - Chromium$"] border pixel 1 
 for_window [class="^Thunderbird$" title="Thunderbird$"] border pixel 1
 for_window [class="^qutebrowser$" title="qutebrowser$"] border pixel 1
 for_window [class="^Firefox$" title="Firefox$"] border pixel 1
@@ -260,20 +247,18 @@ for_window [class="^Atom$" title="Atom$"] border pixel 1
 
 # Floating
 for_window [class="^Blueberry.py$"] floating enable
+for_window [class="^Nm-connection-editor$"] floating enable
+# for_window [class="^org.remmina.Remmina$"] floating enable
 
 
 # Switch Monitor
-bindsym $mod+Shift+s exec --no-startup-id $HOME/bin/monitor.sh
+# bindsym $mod+Shift+s exec --no-startup-id $HOME/bin/monitor.sh
 
 # Screenshots
 # Screenshots mit scrot
 bindsym --release $mod+z exec "scrot -s '/home/mz/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'"
-
-
 # Screenshot complete screen
 bindsym --release $mod+Shift+z exec "scrot '/home/mz/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'"
-
-
 bindsym Print exec "scrot -m '/home/mz/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'"
 bindsym $mod+p exec "scrot -m '/home/mz/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'"
 bindsym $mod+Control+p exec gnome-screenshot -i
@@ -284,4 +269,4 @@ bindsym XF86AudioRaiseVolume    exec $psst pactl set-sink-volume @DEFAULT_SINK@ 
 bindsym XF86AudioMute           exec $psst pactl set-sink-mute @DEFAULT_SINK@ toggle $update
 
 # Alternatig Layouts Script
-exec --no-startup-id /usr/bin/alternating_layouts.py
+#exec --no-startup-id /usr/bin/alternating_layouts.py

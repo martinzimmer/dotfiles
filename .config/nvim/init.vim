@@ -16,6 +16,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
     Plug 'vim-scripts/fountain.vim'
+    " Bootstrap4
+    Plug 'jvanja/vim-bootstrap4-snippets'
 " Color-schemes
     " Plug 'morhetz/gruvbox' "My favorite theme
     " Plug 'kristijanhusak/vim-hybrid-material'

@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-surround'
+    Plug 'sirver/ultisnips'
 " Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
@@ -19,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Bootstrap4
     Plug 'jvanja/vim-bootstrap4-snippets'
 " Color-schemes
+    Plug 'itchyny/lightline.vim'                      " Customize statusline and tabline
     " Plug 'morhetz/gruvbox' "My favorite theme
     " Plug 'kristijanhusak/vim-hybrid-material'
     " Plug 'NLKNguyen/papercolor-theme'
@@ -194,4 +196,14 @@ nnoremap <Leader>6 6gt
 nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
+
+" UltiSnips config
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+
+
+
 " See https://medium.com/@hql287/10-vim-tips-to-ease-the-learning-curve-c8234cbdafa5
+

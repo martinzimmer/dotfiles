@@ -1,3 +1,33 @@
 snippet kbd "HTML kbd tag"
 <kbd>$1</kbd>
 endsnippet
+
+snippet link "Link to something"
+[${1:${VISUAL:Text}}](${3:http://${2:www.url.com}})$0
+endsnippet
+
+snippet img "Image"
+![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0
+endsnippet
+
+snippet ilc "Inline Code"
+\`$1\`$0
+endsnippet
+
+snippet cbl "Codeblock" 
+\`\`\`
+$1
+\`\`\`
+$0
+endsnippet
+
+
+snippet "meta(data)?" "Markdown metadata front matter"
+---
+title: "$1"
+description: "$2"
+published: true
+date: `!v strftime("%Y-%m-%d %H:%M:%S%z")`
+tags: [$3]
+---
+endsnippet

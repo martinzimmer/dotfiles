@@ -11,7 +11,7 @@ snippet img "Image"
 endsnippet
 
 snippet ilc "Inline Code"
-\`$1\`$0
+\`\`\`$1\`\`\`$0
 endsnippet
 
 snippet cbl "Codeblock" 
@@ -22,12 +22,12 @@ $0
 endsnippet
 
 
-snippet "meta(data)?" "Markdown metadata front matter"
+snippet meta "Markdown metadata front matter"
 ---
-title: "$1"
-description: "$2"
+title: $1
+description: $2
 published: true
 date: `!v strftime("%Y-%m-%d %H:%M:%S%z")`
-tags: [$3]
+tags: $3
 ---
 endsnippet

@@ -11,14 +11,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-commentary'
     Plug 'ctrlpvim/ctrlp.vim'
-<<<<<<< HEAD
-    Plug 'tpope/vim-surround'
-    Plug 'sirver/ultisnips'
     Plug 'vimwiki/vimwiki' " ViMWIKI
-=======
     Plug 'tpope/vim-surround'   " T-Pope / Comment out code in a variety of langs
     Plug 'sirver/ultisnips'     " Code Snippets Engine
->>>>>>> 4c985f3e572e3f4b753820bbe194fe3244831060
 " Syntax
     Plug 'PotatoesMaster/i3-vim-syntax' " i3 Config Syntax highlighting
     Plug 'tpope/vim-markdown'   " T-Pope / For markdown fenced langs syntax highlighting

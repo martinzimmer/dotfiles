@@ -11,10 +11,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-commentary'
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'tpope/vim-surround'
-    Plug 'sirver/ultisnips'
+    Plug 'tpope/vim-surround'   " T-Pope / Comment out code in a variety of langs
+    Plug 'sirver/ultisnips'     " Code Snippets Engine
 " Syntax
-    Plug 'tpope/vim-markdown'
+    Plug 'PotatoesMaster/i3-vim-syntax' " i3 Config Syntax highlighting
+    Plug 'tpope/vim-markdown'   " T-Pope / For markdown fenced langs syntax highlighting
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
     Plug 'vim-scripts/fountain.vim'
     " Bootstrap4

@@ -177,6 +177,8 @@ nnoremap <leader>v :tabedit ~/.config/nvim/init.vim<CR>
 nnoremap <leader>q :q!<CR>
 " Quickly Save File
 nnoremap <leader>w :w<CR>
+" Quickly Save File
+noremap <C-S> :w<CR>
 " Saves the file (handling the permission-denied error)
 cnoremap w!! w !sudo tee % >/dev/null 
 

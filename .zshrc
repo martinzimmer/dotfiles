@@ -121,7 +121,7 @@ export LANG=de_DE.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.git-dotfiles/ --work-tree=$HOME'
+# alias dotfiles='/usr/bin/git --git-dir=$HOME/.git-dotfiles/ --work-tree=$HOME'
 alias dcupd='docker-compose up -d'
 alias dcd='docker-compose down'
 alias dcdupd='docker-compose down; docker-compose up -d'
@@ -147,6 +147,7 @@ alias trizene="trizen --noedit $@"
 alias dotfiles='/usr/bin/git --git-dir=/home/mz/.git-dotfiles/ --work-tree=/home/mz'
 alias dot='/usr/bin/git --git-dir=/home/mz/.git-dotfiles/ --work-tree=/home/mz'
 alias dotpush='dot commit -am "Dotfiles aktualisiert"; dot push github master '
+alias dotpull='dot pull github master '
 
 # Docker aliases
 alias dcd="docker-compose down"

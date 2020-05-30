@@ -207,6 +207,7 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+w exec chromium
 bindsym $mod+m exec alacritty -e neomutt
 bindsym $mod+n exec alacritty -e nvim
+bindsym $mod+Shift+n exec alacritty -e nvim +VimwikiIndex
 bindsym $mod+o  exec alacritty -e ranger
 # bindsym $mod+a exec alacritty -e fzf 
 

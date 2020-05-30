@@ -176,6 +176,11 @@ fi
 
 unfunction _exists
 
+alias wiki="nvim +VimwikiIndex"
+
+
+
+
 neofetch
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

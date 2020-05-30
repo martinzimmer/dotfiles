@@ -135,6 +135,7 @@ alias tmux='tmux -2'
 #fi 
 
 
+alias v="nvim -p"
 
 
 # Example aliases

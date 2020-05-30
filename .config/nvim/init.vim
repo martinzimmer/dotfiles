@@ -208,6 +208,34 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VimWiki
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        let g:vimwiki_global_ext = 0
+
+        let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+        let g:vimwiki_root = '~/repos/wiki'
+        let g:vimwiki_listsyms = '✗○◐●✓'
+
+let g:vimwiki_list = [
+        \{'path': '~/repos/wiki/', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/repos/wiki/homelab', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/repos/wiki/privat', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/repos/wiki/linux', 'syntax': 'markdown', 'ext': '.md'} ]
+
+   " ~~~~~ This inputs a NOW() timestamp
+                                autocmd Filetype markdown inoremap <leader>now *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vifm
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>vv :Vifm<CR>
+map <Leader>vs :VsplitVifm<CR>
+map <Leader>sp :SplitVifm<CR>
+map <Leader>dv :DiffVifm<CR>
+map <Leader>tv :TabVifm<CR>
+
+
+
 
 " See https://medium.com/@hql287/10-vim-tips-to-ease-the-learning-curve-c8234cbdafa5
 

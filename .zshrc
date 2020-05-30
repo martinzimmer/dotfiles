@@ -143,10 +143,10 @@ alias v="nvim -p"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias trizene="trizen --noedit $@"
 
+# Dotfiles Git
 alias dotfiles='/usr/bin/git --git-dir=/home/mz/.git-dotfiles/ --work-tree=/home/mz'
-
 alias dot='/usr/bin/git --git-dir=/home/mz/.git-dotfiles/ --work-tree=/home/mz'
-
+alias dotpush='dot commit -am "Dotfiles aktualisiert"; dot push github master '
 
 # Docker aliases
 alias dcd="docker-compose down"

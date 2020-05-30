@@ -224,7 +224,7 @@ let g:vimwiki_list = [
         \{'path': '~/repos/wiki/linux', 'syntax': 'markdown', 'ext': '.md'} ]
 
    " ~~~~~ This inputs a NOW() timestamp
-                                autocmd Filetype markdown inoremap <leader>now *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>
+autocmd Filetype markdown inoremap <leader>now *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vifm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

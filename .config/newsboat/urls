@@ -1,6 +1,5 @@
------------------------
--------NEWSFEEDS--------
-------------------------
+
+# {NEWSFEEDS}
 https://distrowatch.com/news/dw.xml "~NEWSFEED: DistroWatch" 
 http://lxer.com/module/newswire/headlines.rss "~NEWSFEED: LXer"
 https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com"
@@ -21,24 +20,20 @@ http://feeds.arstechnica.com/arstechnica/open-source "~NEWSFEED: ArsTechnica (Op
 https://www.linuxinsider.com/perl/syndication/rssfull.pl "~NEWSFEED: Linux Insider"
 https://hackaday.com/blog/feed/ "~NEWSFEED: Hackaday"
 https://www.gamingonlinux.com/article_rss.php "~NEWSFEED: Gaming On Linux"
--------------------------
--------YOUTUBE-----------
--------------------------
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~YOUTUBE: DistroTube"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwY9B5_8QDGP8niZhBtTh8w "~YOUTUBE: TWiT Netcast"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHugE6eRhqB9_AZQh4DDbIw "~YOUTUBE: Jupiter Broadcasting"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA "~YOUTUBE: Bryan Lunduke"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~YOUTUBE: Luke Smith"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCbHXJGd7c8Hy4z0-YX1Jf3Q "~YOUTUBE: Matt Hartley"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCWJUSpXVHTaHErtGWC5qPlQ "~YOUTUBE: Destination Linux"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ "~YOUTUBE: Level1Techs"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w "~YOUTUBE: Level1Linux"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCv1Kcz-CuGM6mxzL3B1_Eiw "~YOUTUBE: The Linux Gamer"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCRBHiacaQb5S70pljtJYB2g "~YOUTUBE: EposVox"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~YOUTUBE: Linus Tech Tips"
--------------------------
--------REDDIT------------
--------------------------
+# {YOUTUBE}
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~YOUTUBE: DistroTube" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwY9B5_8QDGP8niZhBtTh8w "~YOUTUBE: TWiT Netcast" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHugE6eRhqB9_AZQh4DDbIw "~YOUTUBE: Jupiter Broadcasting" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA "~YOUTUBE: Bryan Lunduke" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~YOUTUBE: Luke Smith" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCbHXJGd7c8Hy4z0-YX1Jf3Q "~YOUTUBE: Matt Hartley" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCWJUSpXVHTaHErtGWC5qPlQ "~YOUTUBE: Destination Linux" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ "~YOUTUBE: Level1Techs" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w "~YOUTUBE: Level1Linux" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCv1Kcz-CuGM6mxzL3B1_Eiw "~YOUTUBE: The Linux Gamer" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRBHiacaQb5S70pljtJYB2g "~YOUTUBE: EposVox" ("YouTube")
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~YOUTUBE: Linus Tech Tips" ("YouTube")
+#-------REDDIT------------
 https://www.reddit.com/r/linux.rss "~REDDIT: r/linux"
 https://www.reddit.com/r/commandline.rss "~REDDIT: r/commandline"
 https://www.reddit.com/r/linux4noobs.rss "~REDDIT: r/linux4noobs"
@@ -50,23 +45,11 @@ https://www.reddit.com/r/ubuntu.rss "~REDDIT: r/ubuntu"
 https://www.reddit.com/r/archlinux.rss "~REDDIT: r/archlinux"
 https://www.reddit.com/r/vim.rss "~REDDIT: r/vim"
 https://www.reddit.com/r/unixporn.rss "~REDDIT: r/unixporn"
--------------------------
--------GIT_REPOS---------
--------------------------
+#-------GIT_REPOS---------
 https://gitlab.com/dwt1.atom "~GITLAB: dwt1 (distrotube)"
 https://github.com/LukeSmithxyz.atom "~GITHUB: LukeSmithxyz"
--------------------------
--------SOURCEFORGE-------
--------------------------
-https://sourceforge.net/p/clonezilla/activity/feed "~SOURCEFORGE: Clonezilla"
-https://sourceforge.net/p/mx-linux/activity/feed "~SORUCEFORGE: MX Linux"
-https://sourceforge.net/p/antix-linux/activity/feed "~SOURCEFORGE: AntiX"
-https://sourceforge.net/mirror/tor-browser/activity/feed ~SOURCEFORGE: Tor Browser"
--------------------------
--------ARCHLINUX---------
--------------------------
-https://www.archlinux.org/feeds/packages/added/ "~ARCH: Packages Added"
-https://www.archlinux.org/feeds/packages/removed/ "~ARCH: Packages Removed"
-https://aur.archlinux.org/rss/ "~ARCH: Packages Added (AUR)"
-https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki"
-"
+#-------ARCHLINUX---------
+https://www.archlinux.org/feeds/packages/added/ "~ARCH: Packages Added" ("Arch")
+https://www.archlinux.org/feeds/packages/removed/ "~ARCH: Packages Removed" ("Arch")
+https://aur.archlinux.org/rss/ "~ARCH: Packages Added (AUR)" ("Arch")
+https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki" ("Arch")

@@ -97,7 +97,7 @@ set autoindent
 set incsearch " Start searching on character press
 set hlsearch " Highlight matched characters
 set ignorecase " Ignore case when searching with lowercase characters
-set smartcase " Do not ignore case when searching with mixed characters
+" set smartcase " Do not ignore case when searching with mixed characters
 
 
 " set noshowmode " Airline shows the current mode so we dont need to see -- INSERT --- anymore
@@ -295,7 +295,7 @@ nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 
 " UltiSnips config
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="C-z"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
@@ -323,10 +323,12 @@ let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
 
 let g:vimwiki_list = [
         \{'path': '~/repos/wiki/', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/repos/wiki/projekte', 'syntax': 'markdown', 'ext': '.md'},
         \{'path': '~/repos/wiki/todo', 'syntax': 'markdown', 'ext': '.md'},
         \{'path': '~/repos/wiki/linux', 'syntax': 'markdown', 'ext': '.md'},
         \{'path': '~/repos/wiki/homelab', 'syntax': 'markdown', 'ext': '.md'},
-        \{'path': '~/repos/wiki/privat', 'syntax': 'markdown', 'ext': '.md'} ]
+        \{'path': '~/repos/wiki/privat', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/repos/wiki/notes', 'syntax': 'markdown', 'ext': '.md'} ]
 
    " ~~~~~ This inputs a NOW() timestamp
 autocmd Filetype markdown inoremap <leader>now *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>

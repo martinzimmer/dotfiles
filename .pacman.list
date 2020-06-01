@@ -43,6 +43,7 @@ dmenu
 dmidecode
 docker
 docker-compose
+dunst
 e2fsprogs
 efibootmgr
 engrampa
@@ -165,6 +166,7 @@ jq
 jre
 kitty
 less
+lf
 libtool
 licenses
 lightsoff
@@ -209,9 +211,11 @@ networkmanager
 networkmanager-openvpn
 networkmanager-vpnc
 networkmanager-wireguard-git
+newsboat
 nfs-utils
 nitrogen
 nmap
+nnn
 nodejs
 npm
 ntp
@@ -238,6 +242,9 @@ powerline2
 procps-ng
 psmisc
 pwgen
+pydf
+python-grip
+python-pip
 python-pyalsa
 qtile
 quadrapassel
@@ -371,6 +378,7 @@ xorg-xwud
 xrdp
 xsel
 yelp
+youtube-dl
 zathura
 zathura-pdf-mupdf
 zip

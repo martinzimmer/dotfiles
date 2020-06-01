@@ -299,7 +299,7 @@ nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 
 " UltiSnips config
-let g:UltiSnipsExpandTrigger="C-z"
+let g:UltiSnipsExpandTrigger="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']

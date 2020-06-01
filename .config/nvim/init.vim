@@ -24,7 +24,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
     Plug 'vim-scripts/fountain.vim'
     Plug 'jvanja/vim-bootstrap4-snippets'
-
+    Plug 'Yggdroot/indentLine'
 " Color-schemes
     Plug 'itchyny/lightline.vim'                      " Customize statusline and tabline
     " Plug 'morhetz/gruvbox' "My favorite theme
@@ -149,6 +149,8 @@ set splitright
 "let g:fugitive_gitlab_domains = ['https://my.gitlab.com']
 " let g:fugitive_gitlab_domains = ['https://10.10.10.101']
 let g:fugitive_gitea_domains = ['https://git.aeschma.de']
+"
+" 
 " IndentLine Plugin
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
@@ -165,6 +167,8 @@ let g:indentLine_color_dark = 1 " (default: 2)
 " Background (Vim, GVim)
 "let g:indentLine_bgcolor_term = 202
 "let g:indentLine_bgcolor_gui = '#FF5F00'
+
+
 
 " Colorschemes
 "colorscheme zenburn

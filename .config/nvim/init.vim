@@ -16,7 +16,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-surround'   " T-Pope / Comment out code in a variety of langs
     Plug 'sirver/ultisnips'     " Code Snippets Engine
     Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-    Plug 'voldikss/vim-floaterm'
+    " Plug 'liuchengxu/vim-which-key'
+    " Plug 'airblade/vim-rooter'
     Plug 'voldikss/vim-floaterm'
 
 " Syntax
@@ -52,10 +53,7 @@ set encoding=utf8  " UTF8 als Zeichensatz
 set backspace=indent,eol,start confirm
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 
-
-" Colorcolumn
-set colorcolumn=80  " nach 80 Zeichen Balken
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
+set formatoptions-=cro                  " Stop newline continution of comments
 
 syntax on       " Syntax Hughlighting
 
@@ -74,7 +72,15 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+
+
+" Colorcolumn + Cursorline
+set colorcolumn=80  " nach 80 Zeichen Balken
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set cursorline
+highlight Cursorline gui=underline cterm=underline ctermbg=None guibg=None
+" set ruler
+
 
 set mouse=a " Enable mouse support
 
@@ -125,7 +131,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set splitbelow
 set splitright
 
-" Unbind the cursor keys in insert, normal and visual modes.
+" Unbind the lursor keys in insert, normal and visual modes.
  "for prefix in ['i', 'n', 'v']
  for prefix in ['n', 'v']
    for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -144,7 +150,7 @@ set splitright
 " nnoremap <leader>j <C-W>j
 " nnoremap <leader>k <C-W>k
 " nnoremap <leader>l <C-W>l
-  
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim Fugitive Einstellungen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -225,8 +231,6 @@ nnoremap <leader>R :FloatermNew ranger<cr>
 "" Open fzf in floaterm
 "nnoremap <leader>f :FloatermNew fzf<cr>
 
-"" NERDTree toggle
-nnoremap <leader>n :NERDTreeToggle<cr>
 
 " Integrations
 command! FZF FloatermNew fzf
@@ -355,9 +359,8 @@ let g:vimwiki_list = [
         \{'path': '~/repos/wiki/privat', 'syntax': 'markdown', 'ext': '.md'},
         \{'path': '~/repos/wiki/notes', 'syntax': 'markdown', 'ext': '.md'} ]
 
-
   " Goyo
-  noremap <leader>g :Goyo<CR>
+  noremap <leader>z :Goyo<CR>
   " Float Term
   nnoremap <leader>t :FloatermNew<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

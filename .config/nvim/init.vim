@@ -348,20 +348,21 @@ let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
         let g:vimwiki_global_ext = 0
 
         let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-        let g:vimwiki_root = '~/repos/wiki'
+        let g:vimwiki_root = '~/wiki'
         let g:vimwiki_listsyms = '✗○◐●✓'
 
 
       "  let g:vimwiki_table_mappins = 0
 
 let g:vimwiki_list = [
-        \{'path': '~/repos/wiki/', 'syntax': 'markdown', 'ext': '.md'},
-        \{'path': '~/repos/wiki/projekte', 'syntax': 'markdown', 'ext': '.md'},
-        \{'path': '~/repos/wiki/todo', 'syntax': 'markdown', 'ext': '.md'},
-        \{'path': '~/repos/wiki/linux', 'syntax': 'markdown', 'ext': '.md'},
-        \{'path': '~/repos/wiki/homelab', 'syntax': 'markdown', 'ext': '.md'},
-        \{'path': '~/repos/wiki/privat', 'syntax': 'markdown', 'ext': '.md'},
-        \{'path': '~/repos/wiki/notes', 'syntax': 'markdown', 'ext': '.md'} ]
+        \{'path': '~/wiki/', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/wiki/projekte', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/wiki/dok', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/wiki/todo', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/wiki/linux', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/wiki/homelab', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/wiki/privat', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/wiki/notes', 'syntax': 'markdown', 'ext': '.md'} ]
 
   " Goyo
   noremap <leader>z :Goyo<CR>

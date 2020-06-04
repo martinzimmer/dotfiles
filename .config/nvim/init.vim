@@ -17,11 +17,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'sirver/ultisnips'     " Code Snippets Engine
     Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
     Plug 'voldikss/vim-floaterm'
+    Plug 'voldikss/vim-floaterm'
 
 " Syntax
     Plug 'PotatoesMaster/i3-vim-syntax' " i3 Config Syntax highlighting
     Plug 'tpope/vim-markdown'   " T-Pope / For markdown fenced langs syntax highlighting
-    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
+    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS
     Plug 'vim-scripts/fountain.vim'
     Plug 'jvanja/vim-bootstrap4-snippets'
     Plug 'Yggdroot/indentLine'
@@ -32,7 +33,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Plug 'NLKNguyen/papercolor-theme'
     " Plug 'ajh17/Spacegray.vim'
     " Plug 'chriskempson/base16-vim'
-call plug#end() 
+call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -355,6 +356,10 @@ let g:vimwiki_list = [
         \{'path': '~/repos/wiki/notes', 'syntax': 'markdown', 'ext': '.md'} ]
 
 
+  " Goyo
+  noremap <leader>g :Goyo<CR>
+  " Float Term
+  nnoremap <leader>t :FloatermNew<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vifm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

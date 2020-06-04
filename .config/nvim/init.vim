@@ -5,6 +5,10 @@ call plug#begin('~/.config/nvim/plugged')
 " Tools
     Plug 'junegunn/goyo.vim'
     Plug 'borissov/fugitive-gitea'
+    " Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+    Plug 'junegunn/gv.vim'
     Plug 'vifm/vifm.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -17,7 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'sirver/ultisnips'     " Code Snippets Engine
     Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
     " Plug 'liuchengxu/vim-which-key'
-    " Plug 'airblade/vim-rooter'
+    Plug 'airblade/vim-rooter'
     Plug 'voldikss/vim-floaterm'
 
 " Syntax

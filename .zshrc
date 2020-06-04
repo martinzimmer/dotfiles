@@ -178,7 +178,7 @@ unfunction _exists
 
 alias wiki="nvim +VimwikiIndex"
 
-
+alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 
 
 neofetch

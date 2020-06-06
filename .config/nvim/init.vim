@@ -156,7 +156,7 @@ set splitright
 " nnoremap <leader>l <C-W>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim Fugitive Einstellungen
+" => vim Fugitive Einstellungen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -167,7 +167,7 @@ set splitright
 let g:fugitive_gitea_domains = ['https://git.aeschma.de']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-" IndentLine Plugin
+" => IndentLine Plugin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_color_term = 239 " Vim
@@ -179,7 +179,7 @@ let g:indentLine_color_dark = 1 " (default: 2)
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-" Colors
+" => Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 
 " Background (Vim, GVim)
@@ -219,7 +219,7 @@ endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"CtrlP
+" => CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -242,7 +242,7 @@ command! Ranger FloatermNew ranger
 command! PythonREPL FloatermNew python
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FuzzyFinder fzf
+" => FuzzyFinder fzf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hidden Files
 let $FZF_DEFAULT_COMMAND = "find -L"
@@ -275,9 +275,9 @@ inoremap <expr> <c-x><c-f> fzf#vim#complete#path(
 
 
 
- """"""""""""""""""""""""""
- " Custom bindings
- """""""""""""""""""""""""""
+""""""""""""""""""""""""""
+" => Custom bindings
+"""""""""""""""""""""""""""
 
 " jk als ESC um vom INert mode in normal mode
 inoremap jk <ESC>
@@ -331,7 +331,7 @@ nnoremap <Leader>= :call IndentFile()<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" UltiSnips config
+" => UltiSnips config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -368,17 +368,9 @@ let g:vimwiki_list = [
   noremap <leader>z :Goyo<CR>
   " Float Term
   nnoremap <leader>t :FloatermNew<CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vifm
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" map <Leader>vv :Vifm<CR>
-" map <Leader>vs :VsplitVifm<CR>
-" map <Leader>sp :SplitVifm<CR>
-" map <Leader>dv :DiffVifm<CR>
-" map <Leader>tv :TabVifm<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" INstant Markdown
+" => Instant Markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let g:instant_markdown_slow = 1
 let g:instant_markdown_autostart = 0

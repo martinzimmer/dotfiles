@@ -30,7 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS
     Plug 'vim-scripts/fountain.vim'
     Plug 'jvanja/vim-bootstrap4-snippets'
-    Plug 'Yggdroot/indentLine'
+    " Plug 'Yggdroot/indentLine'
 " Color-schemes
     Plug 'itchyny/lightline.vim'                      " Customize statusline and tabline
     " Plug 'morhetz/gruvbox' "My favorite theme
@@ -351,7 +351,6 @@ let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
         let g:vimwiki_root = '~/wiki'
         let g:vimwiki_listsyms = '✗○◐●✓'
 
-
       "  let g:vimwiki_table_mappins = 0
 
 let g:vimwiki_list = [
@@ -362,6 +361,7 @@ let g:vimwiki_list = [
         \{'path': '~/wiki/linux', 'syntax': 'markdown', 'ext': '.md'},
         \{'path': '~/wiki/homelab', 'syntax': 'markdown', 'ext': '.md'},
         \{'path': '~/wiki/privat', 'syntax': 'markdown', 'ext': '.md'},
+        \{'path': '~/repos/wikijs', 'syntax': 'markdown', 'ext': '.md'},
         \{'path': '~/wiki/notes', 'syntax': 'markdown', 'ext': '.md'} ]
 
   " Goyo

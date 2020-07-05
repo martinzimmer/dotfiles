@@ -214,13 +214,14 @@ bindsym $mod+o  exec alacritty -e ranger
 
 
 # Autostart 
-exec --no-startup-id picom
+# exec --no-startup-id picom
 exec --no-startup-id parcellite
 exec --no-startup-id pa-applet 
 exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
 exec --no-startup-id remmina -i
 exec --no-startup-id dunst
+exec --no-startup-id discord
 
 
 
